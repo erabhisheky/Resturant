@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" href="https://em-content.zobj.net/source/google/412/curry-rice_1f35b.png" type="image/png">
+    <style>
+        body{
+            background-color: aqua;
+            text-align: center;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/040/986/494/non_2x/ai-generated-cutlery-setting-on-a-restaurant-table-advertising-foodgraphy-photo.jpg");
+            background-size: 100% 100%;
+        }
+        .container{
+            margin:2% 15px 0;
+            padding:10px 20px;
+            color: greenyellow;
+            border-radius: 90px;
+            width: 31%;
+            font-size: 20px;
+        }
+        h1{
+            padding: 20% 20px 10px;
+            margin:0% 10px 0;
+            width: 30%;
+            border-radius: 20px;
+            color: greenyellow;
+            font-size: 80px;
+            text-shadow: 8px 8px black;
+        }
+        .info{
+            padding: 5px;
+            margin:0px 20% 0;
+            background-color: aliceblue;
+            width: 50%;
+            border-radius: 20px;
+            position: fixed;
+        }
+        .ho:hover{
+            background-color: rgb(252, 26, 26);
+            border-radius: 30px ;
+        }
+        .brown:hover{
+            background-color: brown;
+            border-radius: 30px ;
+        }
+        span{
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="info" style="background-color: #f3efef;overflow:hidden;text-align:center;">
+            <a href="index.html" class="ho" style="float: left; display:block;color:rgb(14, 13, 13);padding: 14px 20px; text-decoration:none;">Home</a>
+            <a href="reservation.html" class="ho" style="float: left; display:block;color:rgb(10, 10, 10);padding: 14px 20px; text-decoration:none;">Reservation</a>
+            <a href="location.html" class="ho" style="float: left; display:block;color:rgb(14, 13, 13);padding: 14px 20px; text-decoration:none;">Location</a>
+            <a href="login.html" class="ho" style="float: left; display:block;color:rgb(14, 13, 13);padding: 14px 20px; text-decoration:none;">Login</a>
+            <a href="about.html" class="ho" style="float: left; display:block;color:rgb(14, 13, 13);padding: 14px 20px; text-decoration:none;">About</a>
+        </nav>
+    
+        <div>
+            <h1>GREEN PARADISE</h1>
+        </div>    
+        <div class="container">
+            <h2><u>Welcome <span id="username"></span></u></h2>
+            <h2 class="brown">For Menu please click
+            <a href="Menu.html"><span>Here->😋</span></a>
+        </h2>
+        <p>For more info contact on: 7186482945</p>
+        </div>
+        <div class="container">
+            <h2> Address</h2>
+            <p>Rangoli Restaurant, Fatehgunj Main Road, Vadodara (Opposite Methodish Church)</p>
+            <p>For more accurate location you can acces the location fom menu</p>
+        </div>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get('username') || 'Guest';
+            document.getElementById('username').innerText=username;
+        </script>
+</body>
+</html>
